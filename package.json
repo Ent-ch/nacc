@@ -1,0 +1,21 @@
+{
+  "name": "Simple CRM",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.3",
+    "component-registry": "^0.2.8",
+    "inferno": "^3.10.1",
+    "inferno-bootstrap": "^0.4.0",
+    "inferno-component": "^3.10.1",
+    "inferno-formlib": "^0.3.1",
+    "inferno-scripts": "5.0.0",
+    "isomorphic-schema": "^0.7.1"
+  },
+  "scripts": {
+    "start": "inferno-scripts start",
+    "build": "inferno-scripts build",
+    "test": "inferno-scripts test --env=jsdom",
+    "eject": "inferno-scripts eject"
+  }
+}
