@@ -1,16 +1,16 @@
-export default ({  }) => {
+export default () => {
   return (
     <main className="b4admin-content">
     <div className="b4admin-content-body">
         <div className="container-fluid">
-            <div className="row" style="margin-bottom: 1em;">
+            <div className="row" style={{'margin-bottom': '1em'}}>
                 <div className="col-md-12">
                   <div className="card b4admin-card">
                     <div className="card-header b4admin-header">
                       Register <a href="#" className="btn btn-primary">Novo</a>
                     </div>
                     <div className="card-body">
-                      <div className="row" style="margin-bottom: 1em;">
+                      <div className="row" style={{'margin-bottom': '1em'}}>
                         <div className="col-md-12">
                           <form className="form-inline">
                           <div className="form-group">
