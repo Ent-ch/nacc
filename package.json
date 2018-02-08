@@ -2,7 +2,7 @@
   "name": "SimpleCRM",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://ent-ch.github.io/nacc/",
+  "homepage": "http://ent-ch.github.io/nacc/",
   "dependencies": {
     "bootstrap": "4.0.0-beta.3",
     "classnames": "^2.2.5",
@@ -18,9 +18,11 @@
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
     "start": "inferno-scripts start",
-    "build": "inferno-scripts build && mv build/*.* docs && mv build/static docs",
+    "build": "inferno-scripts build",
     "test": "inferno-scripts test --env=jsdom",
-    "eject": "inferno-scripts eject"
+    "eject": "inferno-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -30,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
+    "gh-pages": "^1.1.0",
     "prettier": "^1.10.2",
     "source-map-explorer": "^1.5.0"
   }
