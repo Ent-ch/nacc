@@ -23,7 +23,6 @@ class App extends Component {
   render() {
     const { openNav } = this.state;
     const leftPos = openNav ? '-230px' : '0';
-    console.log(leftPos, openNav);
   
     return (
       <div>

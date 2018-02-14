@@ -5,7 +5,7 @@ export default ({ leftPos = '0' }) => {
             <div className="card border-0">
                 <ul className="list-group list-group-flush">
                       <li className="list-group-item">
-                        <img className="rounded-circle img-thumbnail"
+                        <img className="rounded-circle img-thumbnail" alt="avatar"
                         src="http://wedesignthemes.com/html/role/images/post-images/profile-img4.jpg" width='80'/>
                         <br /><div className="mt-2 b4admin-profile-title">Marcos Vinicius Tomaz</div>
                       </li>
