@@ -1,39 +1,55 @@
 {
-  "name": "SimpleCRM",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "http://ent-ch.github.io/nacc/",
+  "name": "imgrec",
+  "version": "1.0.0",
+  "description": "images recognition",
+  "main": "./server/index.js",
   "dependencies": {
-    "bootstrap": "4.0.0-beta.3",
-    "classnames": "^2.2.5",
-    "component-registry": "^0.2.8",
-    "font-awesome": "^4.7.0",
-    "inferno": "^3.10.1",
-    "inferno-bootstrap": "^0.4.0",
-    "inferno-component": "^3.10.1",
-    "inferno-formlib": "^0.3.1",
-    "inferno-scripts": "5.0.0",
-    "isomorphic-schema": "^0.7.1"
-  },
-  "scripts": {
-    "analyze": "source-map-explorer build/static/js/main.*",
-    "start": "inferno-scripts start",
-    "build": "inferno-scripts build",
-    "test": "inferno-scripts test --env=jsdom",
-    "eject": "inferno-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "express": "^4.16.4",
+    "inferno": "^5.6.1",
+    "inferno-component": "^6.0.3",
+    "inferno-router": "^5.6.1",
+    "jimp": "^0.5.4",
+    "multer": "^1.4.1",
+    "request": "^2.88.0",
+    "surface": "https://github.com/mildrenben/surface.git"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.17.0",
-    "eslint-config-react-app": "^2.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-react": "^7.6.1",
-    "gh-pages": "^1.1.0",
-    "prettier": "^1.10.2",
-    "source-map-explorer": "^1.5.0"
-  }
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "7",
+    "babel-plugin-inferno": "^5.1.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.2.0",
+    "eslint-plugin-require-path-exists": "^1.1.9",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.4",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start-ui": "start /min http-server ./docs -o -s --cors -c-1 && npm run watch",
+    "start": "node /server/index.js",
+    "dev": "start /min npm run watch && nodemon ./server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ent-ch/imgRec.git"
+  },
+  "keywords": [
+    "Inferno"
+  ],
+  "author": "RVM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ent-ch/imgRec/issues"
+  },
+  "homepage": "https://github.com/Ent-ch/imgRec#readme"
 }
